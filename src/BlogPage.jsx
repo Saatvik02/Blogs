@@ -84,6 +84,7 @@ const BlogPage = () => {
   return (
     <div style={{ maxWidth: "600px", margin: "0 auto", padding: "20px" }}>
       <h1>Blog Page</h1>
+      {/* <h1>":"{import.meta.env.VITE_BACKEND_URL}</h1> */}
 
       {/* New Blog Section */}
       <div style={{ marginBottom: "20px" }}>
@@ -124,10 +125,10 @@ const BlogPage = () => {
             justifyContent: "center",
           }}
         >
-          {blogs.length === 0 ? (
+          {blogs?.length === 0 ? (
             <p>No blogs added yet.</p>
           ) : (
-            blogs.map((blog, index) => (
+            blogs?.map((blog, index) => (
               <div
                 key={blog.id}
                 style={{

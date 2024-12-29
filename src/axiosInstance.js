@@ -2,8 +2,8 @@ import axios from "axios"
 
 const axiosInstance = axios.create({
     withCredentials: true,
-    // baseURL: `https://backend.bmscephaseshift.in`
-    baseURL: `http://localhost:8000`
+    // baseURL: `http://localhost:8000`
+    baseURL: import.meta.env.VITE_BACKEND_URL
 })
 
 export default axiosInstance;
