@@ -69,7 +69,7 @@ const BlogPage = () => {
   const handleDeleteBlog = async (index) => {
     const blogToDelete = blogs[index];
     try {
-      const response = await axiosInstance.post(`delete-blog`, blogToDelete);
+      const response = await axiosInstance.post(`/delete-blog`, blogToDelete);
       if(response.status == 200){
         console.log("blog deleted");
         getBlogs();
@@ -84,9 +84,6 @@ const BlogPage = () => {
   return (
     <div style={{ maxWidth: "600px", margin: "0 auto", padding: "20px" }}>
       <h1>Blog Page</h1>
-      {/* <h1>":"{import.meta.env.VITE_BACKEND_URL}</h1> */}
-
-      {/* New Blog Section */}
       <div style={{ marginBottom: "20px" }}>
         <h2>Add a New Blog</h2>
         <input
